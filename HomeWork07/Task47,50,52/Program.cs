@@ -51,7 +51,7 @@ void PrintArrayTwoDouble(double[,] num)
 int InputRandom()
 {
     Random random = new Random();
-    return random.Next(3, 6); //ограничиваю размер двумерного массива 
+    return random.Next(2, 6); //ограничиваю размер двумерного массива 
 }
 
 int InputMessage(string message)
@@ -124,13 +124,12 @@ void Task52()
     {
         double sum = 0;
         double average = 0;
-        for (int j = 0; j < n; j++)
+        for (int j = 0; j < TwoArray.GetLength(0); j++)
         {
             sum += TwoArray[j, i];            
         }
-        average = Math.Round(sum / m, 1);        
+        average = Math.Round(sum / m, 1);
         Console.Write(average + "\t");      
-    }
-    
+    }    
 }
-//Task52();
+Task52();
